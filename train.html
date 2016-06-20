@@ -1,29 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Employee Tracker</title>
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<title>TrainTracker</title>
 
-  <!-- Firebase Reference -->
-  <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
+<!--Bootstrap CDN-->
 
-  <!-- Moment.js Reference -->
-  <script src="http://momentjs.com/downloads/moment.js"></script>  
-  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+<!--jQuery CDN-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+
+<!--Firebase CDN-->
+
+<script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
+
+<!-- Moment JS-->
+<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
 </head>
 <body>
-
 <!-- train Tracker -->
 <div class="container">
 
   <!-- Jumbotron -->
   <div class="jumbotron" style="background-color: black; color: white">
     <h1 class="text-center">Train Schedule</h1>
-    <h3 class="text-center">Choo choo</h3>
   </div>
   
   <div class="row">
@@ -35,7 +36,7 @@
           <h3 class="panel-title"><strong>Current Train Schedule</strong></h3>
         </div>
         <div class="panel-body">
-          <table class="table table-hover" id='trainTable'>
+          <table class="table table-hover" id='trainData'>
             <thead>
               <tr>
                 <th>Train Name</th>
@@ -63,25 +64,25 @@
         <form>
           <div class="form-group">
             <label for="">Train Name</label>
-            <input type="text" class="form-control" id="TrainNameInput">
+            <input type="text" class="form-control" id="trainNameInput">
           </div>
 
           <div class="form-group">
             <label for="">Destination</label>
-            <input type="text" class="form-control" id="DesInput">
+            <input type="text" class="form-control" id="destinationInput">
           </div>
 
           <div class="form-group">
             <label for="">First Train Time (HH:mm - military time)</label>
-            <input type="text" class="form-control" id="TimeInput">
+            <input type="text" class="form-control" id="firstTrainInput">
           </div>
 
           <div class="form-group">
             <label for="">Frequency</label>
-            <input type="text" class="form-control" id="FreInput">
+            <input type="text" class="form-control" id="frequencyInput">
           </div>
           
-          <button type="submit" class="btn btn-primary" id="addBtn">Submit</button>
+          <button type="submit" class="btn btn-primary" id="addTrainBtn">Submit</button>
         </form>
 
         </div>
@@ -92,7 +93,7 @@
 </div>
 
 <!-- Javascript -->
-<script src=".js"></script>
+<script type="text/javascript" src="assets/js/train.js"></script>
 
 </body>
 </html>
